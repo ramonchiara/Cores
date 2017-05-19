@@ -3,6 +3,8 @@ package br.pro.ramon.ansi;
 public class Program {
 
     public static void main(String[] args) {
+        limpaTela();
+
         cor("vermelho");
         System.out.println("Este texto é vermelho...");
         cor("verde");
@@ -44,6 +46,10 @@ public class Program {
         reset();
         System.out.println();
         System.out.println("De volta ao \"normal\"...");
+    }
+
+    public static void limpaTela() {
+        System.out.printf("\u001b[2J");
     }
 
     public static void reset() {
