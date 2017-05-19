@@ -73,12 +73,14 @@ public class Program {
                 valor = 30;
                 break;
             case "vermelho":
+            case "vermelha":
                 valor = 31;
                 break;
             case "verde":
                 valor = 32;
                 break;
             case "amarelo":
+            case "amarela":
                 valor = 33;
                 break;
             case "azul":
@@ -108,12 +110,14 @@ public class Program {
                 valor = 40;
                 break;
             case "vermelho":
+            case "vermelha":
                 valor = 41;
                 break;
             case "verde":
                 valor = 42;
                 break;
             case "amarelo":
+            case "amarela":
                 valor = 43;
                 break;
             case "azul":
