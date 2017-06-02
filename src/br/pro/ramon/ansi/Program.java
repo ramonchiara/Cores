@@ -1,76 +1,65 @@
 package br.pro.ramon.ansi;
 
-import static br.pro.ramon.ansi.Ansi.cor;
-import static br.pro.ramon.ansi.Ansi.direita;
-import static br.pro.ramon.ansi.Ansi.esquerda;
-import static br.pro.ramon.ansi.Ansi.fundo;
-import static br.pro.ramon.ansi.Ansi.guardaPosicao;
-import static br.pro.ramon.ansi.Ansi.limpaTela;
-import static br.pro.ramon.ansi.Ansi.negrito;
-import static br.pro.ramon.ansi.Ansi.reset;
-import static br.pro.ramon.ansi.Ansi.restauraPosicao;
-import static br.pro.ramon.ansi.Ansi.vaPara;
-
 public class Program {
 
     public static void main(String[] args) {
-        limpaTela();
+        Ansi.limpaTela();
 
-        cor("vermelho");
+        Ansi.cor("vermelho");
         System.out.println("Este texto é vermelho...");
-        cor("verde");
+        Ansi.cor("verde");
         System.out.println("Este texto é verde...");
-        cor("azul");
+        Ansi.cor("azul");
         System.out.println("Este texto é azul...");
-        negrito(true);
+        Ansi.negrito(true);
         System.out.println("Este texto é azul diferente...");
-        negrito(false);
+        Ansi.negrito(false);
         System.out.println("Este texto é azul...");
-        cor("preto");
+        Ansi.cor("preto");
         System.out.print("Que ");
-        cor("ciano");
+        Ansi.cor("ciano");
         System.out.print("cor");
-        cor("preto");
+        Ansi.cor("preto");
         System.out.println(" é essa?");
 
         System.out.println();
         System.out.println("Agora, com fundo amarelo:");
-        fundo("amarelo");
+        Ansi.fundo("amarelo");
 
-        cor("vermelho");
+        Ansi.cor("vermelho");
         System.out.println("Este texto é vermelho...");
-        cor("verde");
+        Ansi.cor("verde");
         System.out.println("Este texto é verde...");
-        cor("azul");
+        Ansi.cor("azul");
         System.out.println("Este texto é azul...");
-        negrito(true);
+        Ansi.negrito(true);
         System.out.println("Este texto é azul diferente...");
-        negrito(false);
+        Ansi.negrito(false);
         System.out.println("Este texto é azul...");
-        cor("preto");
+        Ansi.cor("preto");
         System.out.print("Que ");
-        cor("ciano");
+        Ansi.cor("ciano");
         System.out.print("cor");
-        cor("preto");
+        Ansi.cor("preto");
         System.out.println(" é essa?");
 
-        reset();
+        Ansi.reset();
         System.out.println();
         System.out.println("De volta ao \"normal\"...");
 
-        guardaPosicao();
-        vaPara(7, 40);
+        Ansi.guardaPosicao();
+        Ansi.vaPara(7, 40);
         System.out.println("Teste de posicionamento...");
-        restauraPosicao();
+        Ansi.restauraPosicao();
         System.out.println("De volta à posição antiga...");
 
-        direita();
-        direita();
-        direita();
+        Ansi.direita();
+        Ansi.direita();
+        Ansi.direita();
         System.out.print("3 à direita");
-        esquerda();
-        esquerda();
-        esquerda();
+        Ansi.esquerda();
+        Ansi.esquerda();
+        Ansi.esquerda();
         System.out.println("X");
     }
 
