@@ -1,10 +1,15 @@
 package br.pro.ramon.ansi;
 
 import static br.pro.ramon.ansi.Ansi.cor;
+import static br.pro.ramon.ansi.Ansi.direita;
+import static br.pro.ramon.ansi.Ansi.esquerda;
 import static br.pro.ramon.ansi.Ansi.fundo;
+import static br.pro.ramon.ansi.Ansi.guardaPosicao;
 import static br.pro.ramon.ansi.Ansi.limpaTela;
 import static br.pro.ramon.ansi.Ansi.negrito;
 import static br.pro.ramon.ansi.Ansi.reset;
+import static br.pro.ramon.ansi.Ansi.restauraPosicao;
+import static br.pro.ramon.ansi.Ansi.vaPara;
 
 public class Program {
 
@@ -52,6 +57,21 @@ public class Program {
         reset();
         System.out.println();
         System.out.println("De volta ao \"normal\"...");
+
+        guardaPosicao();
+        vaPara(7, 40);
+        System.out.println("Teste de posicionamento...");
+        restauraPosicao();
+        System.out.println("De volta à posição antiga...");
+
+        direita();
+        direita();
+        direita();
+        System.out.print("3 à direita");
+        esquerda();
+        esquerda();
+        esquerda();
+        System.out.println("X");
     }
 
 }
