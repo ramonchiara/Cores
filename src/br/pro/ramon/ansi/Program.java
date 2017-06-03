@@ -61,6 +61,14 @@ public class Program {
         Ansi.esquerda();
         Ansi.esquerda();
         System.out.println("X");
+        
+        System.out.println("Vamos ao \"programa/módulo/classe\" Utils!");
+        System.out.println("Aguarde 3 segundos...");
+        Utils.sleep(3000);
+        Utils.digita("Que legal essa forma de imprimir texto!!! ");
+        Utils.digita("Atenção que não pula linha! ");
+        Utils.digitaLinha("Agora pula!!!");
+        Utils.digitaLinha("Viu???");
     }
 
 }
